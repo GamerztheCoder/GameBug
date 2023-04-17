@@ -8,7 +8,8 @@ img {
 }
 
 header {
-    background-color: limegreen;
+    text-align: center;
+    background-image: linear-gradient(to bottom right green, limegreen);
     font-size: x-large;
     font-family: 'Times New Roman', Times, serif;
 }
