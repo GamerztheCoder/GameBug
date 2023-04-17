@@ -6,3 +6,9 @@ img {
     height: 190px;
     width: 190px;
 }
+
+header {
+    background-color: limegreen;
+    font-size: x-large;
+    font-family: 'Times New Roman', Times, serif;
+}
