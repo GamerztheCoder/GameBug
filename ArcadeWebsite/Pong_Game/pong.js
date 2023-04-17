@@ -1,9 +1,10 @@
 "use strict";
 
+const c = document.getElementById('pongTable');
+const ctx = c.getContext('2d');
+
 class Ball {
   create(ballX, ballY) {
-    let c = document.getElementById("pongTable");
-    let ctx = c.getContext("2d");
     ctx.beginPath();
     ctx.fillStyle = "yellow";
     ctx.lineWidth = "1";
@@ -15,8 +16,6 @@ class Ball {
 class Paddles {
   create(paddleType, x, y) {
     if (paddleType === "Left") {
-      let c = document.getElementById("pongTable");
-      let ctx = c.getContext("2d");
       ctx.fillStyle = "white";
       ctx.beginPath();
       ctx.lineWidth = "6";
@@ -24,8 +23,6 @@ class Paddles {
       ctx.fillRect(x, y, 10, 85);
       ctx.stroke();
     } else if (paddleType === "Right") {
-      let c = document.getElementById("pongTable");
-      let ctx = c.getContext("2d");
       ctx.beginPath();
       ctx.fillStyle = "white";
       ctx.lineWidth = "1";
@@ -38,7 +35,7 @@ class Paddles {
 
 let paddle = new Paddles();
 let ball = new Ball();
-let speed = 2;
+const speed = 2;
 let yBounce = 0;
 let xBounce = 0;
 let ballXandY = [290, 240];
@@ -64,8 +61,6 @@ let rightPaddleDimension = {
 };
 
 function resetCanvas() {
-  let c = document.getElementById("pongTable");
-  let ctx = c.getContext("2d");
   ctx.clearRect(0, 0, 550, 500);
   paddle.create("Left", 30, paddleY);
   paddle.create("Right", 500, rpaddleY);
@@ -175,10 +170,10 @@ function startGame() {
 
 function startBall() {
   setTimeout(function () {
-    console.log('Start!');
-  }, 1000)
-  setInterval(function () {
-    updateBall();
-    resetCanvas();
+    setInterval(function () {
+      updateBall();
+      resetCanvas();
   }, 12);
+  }, 1000)
+  
 }
