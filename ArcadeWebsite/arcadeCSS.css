@@ -8,6 +8,7 @@ img {
 }
 
 header {
+    height: 100px;
     text-align: center;
     background-image: linear-gradient(to bottom right, green, limegreen);
     font-size: x-large;
