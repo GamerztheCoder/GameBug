@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <title>Pong</title>
+<html>
+  <head>
+    <link rel="stylesheet" href="pongStyle.css" />
+    
+    <py-script src=""></py-script>
+  </head>
 
-<head>
-  <link rel="stylesheet" href="pongStyle.css" />
-  
-  <py-script src=""></py-script>
-</head>
-
-<body>
-  <center>
-    <h1>PONG</h1>
-  </center>
-  <center>
-    <canvas class="game hidden" id="pongTable" width="550" height="500"></canvas>
-    <h3 class="shown" id="startInstruction">
-      <p id="gameGuide">Press the START button to play</p>
-      <button type="button" onclick="startGame(); startBall();" id="gameButton" class="button">
-        START
-      </button>
-    </h3>
-    <p></p>
-    <main id="scoreBoard" class="hidden">
-      <h2 id="userGoal">Player1: <span id="player0Points">0</span></h2>
-      <h2 id="user2Goal">Player2: <span id="player1Points">0</span></h2>
-    </main>
-  </center>
-  <script src="pong.js"></script>
-</body>
+  <body>
+    <center>
+      <h1>PONG</h1>
+    </center>
+    <center>
+      <canvas class="game hidden" id="pongTable" width="550" height="500"></canvas>
+      <h3 class="shown" id="startInstruction">
+        <p id="gameGuide">Press the START button to play</p>
+        <button type="button" onclick="startGame(); startBall();" id="gameButton" class="button">
+          START
+        </button>
+      </h3>
+      <p></p>
+      <main id="scoreBoard" class="hidden">
+        <h2 id="userGoal">Player1: <span id="player0Points">0</span></h2>
+        <h2 id="user2Goal">Player2: <span id="player1Points">0</span></h2>
+      </main>
+    </center>
+    <script src="pong.js"></script>
+  </body>
+</html>
