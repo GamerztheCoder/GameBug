@@ -1,11 +1,7 @@
 .icon {
     height: 190px;
     width: 190px;
-    border: 5px black;
-}
-
-a {
-    border: 5px black;
+    border: solid 5px black;
 }
 
 object {
