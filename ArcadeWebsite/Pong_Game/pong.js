@@ -1,6 +1,6 @@
 "use strict";
 
-const c = document.getElementById('pongTable');
+let c = document.getElementById('pongTable');
 const ctx = c.getContext('2d');
 
 class Ball {
