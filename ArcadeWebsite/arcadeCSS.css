@@ -1,4 +1,4 @@
-img {
+.icon {
     height: 190px;
     width: 190px;
 }
@@ -7,7 +7,7 @@ object {
     visibility: visible;
 }
 
-header {
+.title {
     height: 100px;
     text-align: center;
     background-image: linear-gradient(to bottom right, green, limegreen);
