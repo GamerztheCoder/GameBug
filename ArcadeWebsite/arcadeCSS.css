@@ -1,10 +1,10 @@
-object {
-    visibility: visible;
-}
-
 img {
     height: 190px;
     width: 190px;
+}
+
+object {
+    visibility: visible;
 }
 
 header {
