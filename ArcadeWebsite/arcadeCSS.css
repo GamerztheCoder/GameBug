@@ -4,6 +4,10 @@
     border: 5px black;
 }
 
+a {
+    border: 5px black;
+}
+
 object {
     visibility: visible;
 }
