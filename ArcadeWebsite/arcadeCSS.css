@@ -13,4 +13,5 @@ object {
     background-image: linear-gradient(to bottom right, green, limegreen);
     font-size: x-large;
     font-family: 'Times New Roman', Times, serif;
+    font-weight: 300;
 }
