@@ -1,6 +1,6 @@
 "use strict";
 
-const c = document.getElementById('pongTable');
+let c = document.getElementById('pongTable');
 const ctx = c.getContext('2d');
 
 class Ball {
@@ -38,36 +38,33 @@ let ball = new Ball();
 const speed = 2;
 let yBounce = 0;
 let xBounce = 0;
-let ballXandY = [290, 240];
-let paddleY = 200;
-let rpaddleY = 200;
 let ballDimension = {
-  x: ballXandY[0],
-  y: ballXandY[1],
+  x: 290,
+  y: 240,
   height: 10,
   width: 10,
 };
 let leftPaddleDimension = {
   x: 30,
-  y: paddleY,
+  y: 200,
   width: 10,
   height: 85,
 };
 let rightPaddleDimension = {
   x: 500,
-  y: rpaddleY,
+  y: 200,
   width: 10,
   height: 85,
 };
 
 function resetCanvas() {
   ctx.clearRect(0, 0, 550, 500);
-  paddle.create("Left", 30, paddleY);
-  paddle.create("Right", 500, rpaddleY);
-  ball.create(ballXandY[0], ballXandY[1]);
+  paddle.create("Left", 30, leftPaddleDimension.y);
+  paddle.create("Right", 500, rightPaddleDimension.y);
+  ball.create(ballDimension.x, ballDimension.y);
 }
 
-function isCollide(ballItem, leftPaddleItem, rightPaddleItem) {
+function isColliding(ballItem, leftPaddleItem, rightPaddleItem) {
   if (
     ballItem.x + ballItem.width >= leftPaddleItem.x &&
     ballItem.x <= leftPaddleItem.x + leftPaddleItem.width &&
@@ -88,39 +85,35 @@ function isCollide(ballItem, leftPaddleItem, rightPaddleItem) {
 };
 
 function updateBall() {
-  let collide = isCollide(ballDimension, leftPaddleDimension, rightPaddleDimension);
+  let collide = isColliding(ballDimension, leftPaddleDimension, rightPaddleDimension);
   if (collide) {
     xBounce = (xBounce + 1) % 2
   };
-  if (ballXandY[0] <= 0) {
-    ballXandY[0] = 290;
-    ballXandY[1] = 240;
+  if (ballDimension.x <= 0) {
+    ballDimension.x = 290;
+    ballDimension.y = 240;
     document.getElementById('player1Points').innerHTML = Number(document.getElementById('player1Points').innerHTML) + 1
   }
-  if (ballXandY[0] >= 540) {
-    ballXandY[0] = 290;
-    ballXandY[1] = 240;
+  if (ballDimension.x >= 540) {
+    ballDimension.x = 290;
+    ballDimension.y = 240;
     document.getElementById('player0Points').innerHTML = Number(document.getElementById('player0Points').innerHTML) + 1
   }
-  if (ballXandY[1] <= 0) {
+  if (ballDimension.y <= 0) {
     yBounce = 1
   }
-  if (ballXandY[1] >= 490) {
+  if (ballDimension.y >= 490) {
     yBounce = 0;
   }
   if (xBounce === 0) {
-    ballXandY[0] -= speed;
-    ballDimension.x = ballXandY[0]
+    ballDimension.x -= speed;
   } else {
-    ballXandY[0] += speed;
-    ballDimension.x = ballXandY[0]
+    ballDimension.x += speed;
   }
   if (yBounce === 0) {
-    ballXandY[1] -= speed;
-    ballDimension.y = ballXandY[1]
+    ballDimension.y -= speed;
   } else {
-    ballXandY[1] += speed;
-    ballDimension.y = ballXandY[1]
+    ballDimension.y += speed;
   }
 }
 
@@ -133,36 +126,32 @@ function startGame() {
   resetCanvas();
   document.addEventListener("keydown", function (event) {
     if (event.code === "KeyW") {
-      paddleY -= 10;
-      if (paddleY <= 0) {
-        paddleY = 0;
+      leftPaddleDimension.y -= 10;
+      if (leftPaddleDimension.y <= 0) {
+        leftPaddleDimension.y = 0;
       }
-      leftPaddleDimension.y = paddleY
       resetCanvas();
     } else if (event.code === "KeyS") {
-      paddleY += 10;
-      if (paddleY >= 420) {
-        paddleY = 420;
+      leftPaddleDimension.y += 10;
+      if (leftPaddleDimension.y >= 420) {
+        leftPaddleDimension.y = 420;
       }
-      leftPaddleDimension.y = paddleY
       resetCanvas();
     }
   });
   document.addEventListener("keydown", function (event) {
     if (event.code === "ArrowUp") {
-      rpaddleY -= 10;
-      if (rpaddleY <= 0) {
-        rpaddleY = 0;
+      rightPaddleDimension.y -= 10;
+      if (rightPaddleDimension.y <= 0) {
+        rightPaddleDimension.y = 0;
       }
-      rightPaddleDimension.y = rpaddleY
       resetCanvas();
     }
     if (event.code === "ArrowDown") {
-      rpaddleY += 10;
-      if (rpaddleY >= 420) {
-        rpaddleY = 420;
+      rightPaddleDimension.y += 10;
+      if (rightPaddleDimension.y >= 420) {
+        rightPaddleDimension.y = 420;
       }
-      rightPaddleDimension.y = rpaddleY
       resetCanvas();
     }
   });
