@@ -4,7 +4,9 @@
     border: solid 5px black;
 }
 
-object {
+.game {
+    height: 700;
+    width: 700;
     visibility: visible;
 }
 
