@@ -1,40 +1,37 @@
 "use strict";
 
-let c = document.getElementById('castleBoard');
+const c = document.getElementById('castleBoard');
 const ctx = c.getContext('2d');
 
+// Define the Gunman class
 class Gunman {
-    constructor(x, y, imageSrc, weapon, health) {
-      this.x = x;
-      this.y = y;
-      this.image = new Image();
-      this.image.src = imageSrc;
-      this.weapon = weapon;
-      this.health = health;
-    }
+constructor(x, y, width, height) {
+  this.x = x;
+  this.y = y;
+  this.width = width;
+  this.height = height;
+}
 
-    shoot(target) {
-      console.log(`${this.name} shoots at ${target} with ${this.weapon}!`);
-    }
+render() {
+  ctx.fillStyle = "gray"; // Set fill color for the body
+  ctx.fillRect(this.x, this.y, this.width, this.height); // Draw the body
 
-    takeDamage(damage) {
-      this.health -= damage;
-      console.log(`${this.name} takes ${damage} damage. Health: ${this.health}`);
-      if (this.health <= 0) {
-        console.log(`${this.name} has been defeated!`);
-      }
-    }
+  ctx.fillStyle = "black"; // Set fill color for the head
+  ctx.beginPath();
+  ctx.arc(this.x + this.width/2, this.y - this.height/2, this.width/4, 0, Math.PI * 2); // Draw the head
+  ctx.closePath();
+  ctx.fill();
 
-    render(ctx) {
-      ctx.drawImage(this.image, this.x, this.y);
-    }
-  }
-  
-  // Create a new instance of Gunman
-  const gunmanImageSrc = "gunman.png"; // Replace with path to your gunman image
-  const player = new Gunman(50, 50, gunmanImageSrc, "pistol", 100);
+  ctx.fillStyle = "brown"; // Set fill color for the gun
+  ctx.fillRect(this.x - this.width/4, this.y + this.height/4, this.width/2, this.height/2); // Draw the gun
 
-  // Render the gunman on the canvas
-  player.image.onload = function() {
-    ctx.drawImage(player.image, player.x, player.y);
-  };
+  ctx.fillStyle = "black"; // Set fill color for the gun barrel
+  ctx.fillRect(this.x - this.width/4, this.y - this.height/2, this.width/2, this.height/8); // Draw the gun barrel
+}
+}
+
+// Create a Gunman instance
+const gunman = new Gunman(250, 400, 100, 150);
+
+// Render the gunman on the canvas
+gunman.render();
