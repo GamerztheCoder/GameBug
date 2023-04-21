@@ -2,6 +2,7 @@
     height: 190px;
     width: 190px;
     border: solid 5px black;
+    font-weight: 300;
 }
 
 .game {
@@ -17,6 +18,17 @@
     font-weight: 300;
     font-size: xx-large;
     font-family: 'Times New Roman', Times, serif;
+}
+
+.container {
+    height: 190px;
+    width: 190px;
+    display: flex;
+    justify-content: space-between; 
+}
+
+.link {
+    padding: 10px; 
 }
 
 body {
