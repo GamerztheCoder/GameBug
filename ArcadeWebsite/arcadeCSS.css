@@ -2,6 +2,7 @@
     height: 190px;
     width: 190px;
     border: solid 5px black;
+    font-weight: 300;
 }
 
 .game {
@@ -15,8 +16,19 @@
     text-align: center;
     background-image: linear-gradient(to bottom right, green, limegreen);
     font-weight: 300;
-    font-size: x-large;
+    font-size: xx-large;
     font-family: 'Times New Roman', Times, serif;
+}
+
+.container {
+    height: 190px;
+    width: 190px;
+    display: flex;
+    justify-content: space-between; 
+}
+
+.link {
+    padding: 10px; 
 }
 
 body {
