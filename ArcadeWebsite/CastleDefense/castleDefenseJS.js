@@ -29,7 +29,7 @@ render(side) {
   ctx.fillStyle = "black"; // Set fill color for the gun barrel
   ctx.fillRect(this.x - this.width/4 + 10, this.y - this.height/2 + 53, this.width/2, this.height/8); // Draw the gun barrel
   }
-  if(side=='right'){
+  else if(side=='right'){
     ctx.fillStyle = "gray"; // Set fill color for the body
   ctx.fillRect(this.x + 30, this.y, this.width - 60, this.height - 30); // Draw the body
 
