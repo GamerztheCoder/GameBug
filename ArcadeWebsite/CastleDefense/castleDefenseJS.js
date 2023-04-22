@@ -12,46 +12,27 @@ constructor(x, y, width, height) {
   this.height = height;
 }
 
-render(side) {
-  if(side == 'left'){
+render() {
   ctx.fillStyle = "gray"; // Set fill color for the body
-  ctx.fillRect(this.x + 30, this.y, this.width - 60, this.height - 30); // Draw the body
+  ctx.fillRect(this.x*1.04, this.y, this.width/3, this.height); // Draw the body
 
   ctx.fillStyle = "black"; // Set fill color for the head
   ctx.beginPath();
-  ctx.arc(this.x + this.width/2, this.y - this.height/2 + 30, this.width/4, 0, Math.PI * 2); // Draw the head
+  ctx.arc(this.x + this.width/2.7, this.y - this.height/5, this.width/4, 0, Math.PI * 2); // Draw the head
   ctx.closePath();
   ctx.fill();
 
   ctx.fillStyle = "brown"; // Set fill color for the gun
-  ctx.fillRect(this.x - this.width/4 + 30, this.y + this.height/4 - 15, this.width/2 - 30, this.height/2 - 30); // Draw the gun
+  ctx.fillRect(this.x - this.width/12, this.y + this.height/8, this.width/5, this.height/3); // Draw the gun
 
   ctx.fillStyle = "black"; // Set fill color for the gun barrel
-  ctx.fillRect(this.x - this.width/4 + 10, this.y - this.height/2 + 53, this.width/2, this.height/8); // Draw the gun barrel
-  }
-  else if(side=='right'){
-    ctx.fillStyle = "gray"; // Set fill color for the body
-  ctx.fillRect(this.x + 30, this.y, this.width - 60, this.height - 30); // Draw the body
-
-  ctx.fillStyle = "black"; // Set fill color for the head
-  ctx.beginPath();
-  ctx.arc(this.x + this.width/2, this.y - this.height/2 + 30, this.width/4, 0, Math.PI * 2); // Draw the head
-  ctx.closePath();
-  ctx.fill();
-
-  ctx.fillStyle = "brown"; // Set fill color for the gun
-  ctx.fillRect(this.x - this.width/4 + 80, this.y + this.height/4 - 15, this.width/2 - 30, this.height/2 - 30); // Draw the gun
-
-  ctx.fillStyle = "black"; // Set fill color for the gun barrel
-  ctx.fillRect(this.x - this.width/4 + 70, this.y - this.height/2 + 53, this.width/2, this.height/8); // Draw the gun barrel
-  }
+  ctx.fillRect(this.x - this.width/4, this.y - this.height/60, this.width/1.4, this.height/8); // Draw the gun barrel
 }
+
 }
 
 // Create a Gunman instance
-const gunman1 = new Gunman(150, 200, 80, 100);
-const gunman2 = new Gunman(400, 200, 80, 100);
+const gunman = new Gunman(40, 40, 15, 15);
 
 // Render the gunman on the canvas
-gunman1.render('left');
-gunman2.render('right');
+gunman.render()
