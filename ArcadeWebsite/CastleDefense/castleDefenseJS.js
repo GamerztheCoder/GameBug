@@ -52,7 +52,7 @@ function isCollidingWithSeeingArc(gunman, allGunmen) {
     let angleDifference = Math.abs(angle - Math.atan2(gunman.y, gunman.x));
     if (distance <= gunman.sightRadius && angleDifference <= halfFovAngle) {
       return true; // Collision detected
-    } else {return false};
+    }
   }};
 
 // Render the gunman on the canvas
