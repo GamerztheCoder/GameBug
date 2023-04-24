@@ -32,7 +32,10 @@ render() {
 }
 
 // Create a Gunman instance
-const gunman = new Gunman(40, 40, 15, 15);
+
 
 // Render the gunman on the canvas
-gunman.render()
+document.addEventListener('mousedown', function(event){
+  let gunman = new Gunman(clientX, clientY, 15, 15);
+  gunman.render()
+})
