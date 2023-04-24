@@ -1,8 +1,14 @@
+.guideScreen {
+  padding: 0; margin: 0;
+  height: 50px;
+  background: linear-gradient(135deg, lime, darkgreen);
+}
+
 .game {
     background-color: burlywood;
     border: 20px  solid black;
 }
 
-.guideScreen {
-    background-image: linear-gradient(to bottom right lime, darkgreen);
+body {
+    background-color: blanchedalmond;
 }
