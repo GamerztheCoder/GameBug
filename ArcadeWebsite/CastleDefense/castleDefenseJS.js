@@ -14,7 +14,7 @@ constructor(x, y, width, height) {
 
 render() {
   ctx.fillStyle = "gray"; // Set fill color for the body
-  ctx.fillRect(this.x*1.04, this.y, this.width/3, this.height); // Draw the body
+  ctx.fillRect(this.x+3, this.y, this.width/3, this.height); // Draw the body
 
   ctx.fillStyle = "black"; // Set fill color for the head
   ctx.beginPath();
@@ -35,7 +35,7 @@ render() {
 
 
 // Render the gunman on the canvas
-document.addEventListener('mousedown', function(event){
-  let gunman = new Gunman(clientX, clientY, 15, 15);
+c.addEventListener('mousedown', function(event){
+  let gunman = new Gunman(event.clientX-390, event.clientY-100, 15, 15);
   gunman.render()
 })
