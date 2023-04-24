@@ -2,3 +2,7 @@
     background-color: burlywood;
     border: 20px  solid black;
 }
+
+.guideScreen {
+    background-image: linear-gradient(to bottom right lime, darkgreen);
+}

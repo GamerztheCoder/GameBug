@@ -5,11 +5,12 @@ const ctx = c.getContext('2d');
 
 // Define the Gunman class
 class Gunman {
-constructor(x, y, width, height) {
+constructor(x, y, width, height, sightRadius) {
   this.x = x;
   this.y = y;
   this.width = width;
   this.height = height;
+  this.sightRadius = sightRadius;
 }
 
 render() {
@@ -31,11 +32,8 @@ render() {
 
 }
 
-// Create a Gunman instance
-
-
 // Render the gunman on the canvas
 c.addEventListener('mousedown', function(event){
-  let gunman = new Gunman(event.clientX-390, event.clientY-100, 15, 15);
+  let gunman = new Gunman(event.clientX-390, event.clientY-130, 15, 15, 100);
   gunman.render()
 })
