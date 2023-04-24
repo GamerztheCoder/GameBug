@@ -5,7 +5,7 @@ const ctx = c.getContext('2d');
 
 // Define the Gunman class
 class Gunman {
-constructor(x, y, width, height, sightRadius, health, power) {
+constructor(x, y, width, height, sightRadius,) {
   this.x = x;
   this.y = y;
   this.width = width;
