@@ -5,12 +5,14 @@ const ctx = c.getContext('2d');
 
 // Define the Gunman class
 class Gunman {
-constructor(x, y, width, height, sightRadius) {
+constructor(x, y, width, height, sightRadius, health, power) {
   this.x = x;
   this.y = y;
   this.width = width;
   this.height = height;
   this.sightRadius = sightRadius;
+  this.health = health;
+  this.power = power;
 }
 
 render() {
@@ -28,9 +30,7 @@ render() {
 
   ctx.fillStyle = "black"; // Set fill color for the gun barrel
   ctx.fillRect(this.x - this.width/4, this.y - this.height/60, this.width/1.4, this.height/8); // Draw the gun barrel
-}
 
-renderSight() {
   ctx.beginPath();
   ctx.arc(this.x, this.y, this.sightRadius, 0, Math.PI * 2);
   ctx.globalAlpha = 0.3;
@@ -43,7 +43,4 @@ renderSight() {
 }
 
 // Render the gunman on the canvas
-c.addEventListener('mousedown', function(event){
-  let gunman = new Gunman(event.clientX-666, event.clientY-130, 15, 15, 100);
-  gunman.render()
-})
+
