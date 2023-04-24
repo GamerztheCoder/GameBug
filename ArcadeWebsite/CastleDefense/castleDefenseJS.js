@@ -11,8 +11,6 @@ constructor(x, y, width, height, sightRadius, health, power) {
   this.width = width;
   this.height = height;
   this.sightRadius = sightRadius;
-  this.health = health;
-  this.power = power;
 }
 
 render() {
@@ -32,7 +30,7 @@ render() {
   ctx.fillRect(this.x - this.width/4, this.y - this.height/60, this.width/1.4, this.height/8); // Draw the gun barrel
 
   ctx.beginPath();
-  ctx.arc(this.x, this.y, this.sightRadius, 0, Math.PI * 2);
+  ctx.arc(this.x + 5, this.y, this.sightRadius, 0, Math.PI * 2);
   ctx.globalAlpha = 0.3;
   ctx.fillStyle = "black";
   ctx.fill();
@@ -42,5 +40,30 @@ render() {
 
 }
 
+let gunmen = [];
+function isCollidingWithSeeingArc(gunman, allGunmen) {
+  for (let i = 0; i < allGunmen.length; i++) {
+    if (gunman === allGunmen[i]) {continue}; // Skip checking against itself
+    let dx = allGunmen[i].x - gunman.x;
+    let dy = allGunmen[i].y - gunman.y;
+    let distance = Math.sqrt(dx * dx + dy * dy);
+    let angle = Math.atan2(dy, dx);
+    let halfFovAngle = gunman.sightRadius / 2;
+    let angleDifference = Math.abs(angle - Math.atan2(gunman.y, gunman.x));
+    if (distance <= gunman.sightRadius && angleDifference <= halfFovAngle) {
+      return true; // Collision detected
+    } else {return false};
+  }};
+
 // Render the gunman on the canvas
 
+c.addEventListener('mousedown', (event) => {
+  let gunman = new Gunman(event.clientX-385, event.clientY-130, 15, 15, 50);
+  if(isCollidingWithSeeingArc(gunman, gunmen)){
+    console.log('cannot place there')
+  }else{
+    gunmen.push(gunman)
+    gunman.render()
+  }
+  console.log(gunmen)
+});
