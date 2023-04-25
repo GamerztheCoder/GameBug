@@ -58,7 +58,7 @@ function isCollidingWithSeeingArc(gunman, allGunmen) {
 // Render the gunman on the canvas
 
 c.addEventListener('mousedown', (event) => {
-  let gunman = new Gunman(event.clientX-385, event.clientY-130, 15, 15, 50);
+  let gunman = new Gunman(event.clientX-666, event.clientY-160, 15, 15, 50);
   if(isCollidingWithSeeingArc(gunman, gunmen)){
     console.log('cannot place there')
   }else{

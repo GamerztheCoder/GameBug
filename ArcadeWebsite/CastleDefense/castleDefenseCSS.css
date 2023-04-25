@@ -2,6 +2,7 @@
   padding: 0; margin: 0;
   height: 50px;
   background: linear-gradient(135deg, lime, darkgreen);
+  font-size: xx-large;
 }
 
 .game {
