@@ -65,5 +65,4 @@ c.addEventListener('mousedown', (event) => {
     gunmen.push(gunman)
     gunman.render()
   }
-  console.log(gunmen)
 });
