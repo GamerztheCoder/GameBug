@@ -39,9 +39,9 @@ render() {
 }
 
 pathBuilder() {
-  const rect = canvas.getBoundingClientRect();
+  const rect = c.getBoundingClientRect();
   ctx.beginPath();
-  ctx.arc((this.x + 666) - rect.left + 5, (this.y + 130) - rect.top, this.sightRadius, 0, Math.PI * 2);
+  ctx.arc((this.x + 300) - rect.left + 5, (this.y + 140) - rect.top, this.sightRadius, 0, Math.PI * 2);
   ctx.fillStyle = "blanchedalmond";
   ctx.fill();
   ctx.closePath();
@@ -119,9 +119,8 @@ let pathBlocks = {
   67: new Gunman(606, 213, 15, 15, 50),
 };
 
-for(let i = 0; i in pathBlocks; i++){
+for(let i = 1; i in pathBlocks; i++){
   pathBlocks[i].pathBuilder()
-  console.log('Path Tile #'+i,'placed.')
 };
 
 function isCollidingWithSeeingArc(gunman, allGunmen) {
