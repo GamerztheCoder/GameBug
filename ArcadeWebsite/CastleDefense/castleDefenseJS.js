@@ -99,23 +99,27 @@ let pathBlocks = {
   48: new Gunman(411, 419, 15, 15, 50),
   49: new Gunman(421, 404, 15, 15, 50),
   50: new Gunman(423, 391, 15, 15, 50),
-  51: new Gunman(, 15, 15, 50),
-  52: new Gunman(, 15, 15, 50),
-  53: new Gunman(, 15, 15, 50),
-  54: new Gunman(, 15, 15, 50),
-  55: new Gunman(, 15, 15, 50),
-  56: new Gunman(, 15, 15, 50),
-  57: new Gunman(, 15, 15, 50),
-  58: new Gunman(, 15, 15, 50),
-  59: new Gunman(, 15, 15, 50),
-  60: new Gunman(, 15, 15, 50),
-  61: new Gunman(, 15, 15, 50),
-  62: new Gunman(, 15, 15, 50),
-  63: new Gunman(, 15, 15, 50),
-  64: new Gunman(, 15, 15, 50),
-  65: new Gunman(, 15, 15, 50),
-  66: new Gunman(, 15, 15, 50),
-  67: new Gunman(, 15, 15, 50),
+  51: new Gunman(431, 368, 15, 15, 50),
+  52: new Gunman(433, 353, 15, 15, 50),
+  53: new Gunman(435, 336, 15, 15, 50),
+  54: new Gunman(435, 314, 15, 15, 50),
+  55: new Gunman(435, 292, 15, 15, 50),
+  56: new Gunman(436, 279, 15, 15, 50),
+  57: new Gunman(438, 265, 15, 15, 50),
+  58: new Gunman(445, 243, 15, 15, 50),
+  59: new Gunman(466, 225, 15, 15, 50),
+  60: new Gunman(482, 217, 15, 15, 50),
+  61: new Gunman(500, 213, 15, 15, 50),
+  62: new Gunman(525, 210, 15, 15, 50),
+  63: new Gunman(543, 210, 15, 15, 50),
+  64: new Gunman(561, 210, 15, 15, 50),
+  65: new Gunman(579, 210, 15, 15, 50),
+  66: new Gunman(598, 212, 15, 15, 50),
+  67: new Gunman(606, 213, 15, 15, 50),
+};
+
+for(let i = 0; i in pathBlocks; i++){
+  pathBlocks[i].pathBuilder()
 };
 
 function isCollidingWithSeeingArc(gunman, allGunmen) {
@@ -135,7 +139,7 @@ function isCollidingWithSeeingArc(gunman, allGunmen) {
 // Render the gunman on the canvas
 
 c.addEventListener('mousedown', (event) => {
-  let gunman = new Gunman(event.clientX-666, event.clientY-160, 15, 15, 50);
+  let gunman = new Gunman(event.clientX-483, event.clientY-150, 15, 15, 50);
   if(isCollidingWithSeeingArc(gunman, gunmen)){
     console.log('cannot place there')
   }else{
