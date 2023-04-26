@@ -4,22 +4,27 @@
     width: 800px;
     margin: auto;
     padding: 80px 0;
-  }
-  .square {
+}
+.square {
     width: 100px;
     height: 90px;
     text-align: center;
     line-height: 100px;
     font-size: 100px;
-  }
-  .white {
+}
+.white {
     background-color: #812222;
-  
-  }
-  .black {
-    background-color: #b58863;
-  }
-  .pawn {
-    background-image: url(/BlackPawn.png);
 
-  }
+}
+.black {
+    background-color: #b58863;
+}
+.pawnBlack {
+    background-image: url("./BlackPawn.png");
+    background-size: 95%;
+}
+
+.pawnWhite {
+    background-image: url('./WhitePawn.png');
+    background-size: 95%;
+}
