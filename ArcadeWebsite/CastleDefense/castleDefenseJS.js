@@ -145,10 +145,11 @@ c.addEventListener('mousedown', (event) => {
   let mouseY = event.clientY - rect.top
   let gunman = new Gunman(mouseX, mouseY, 15, 15, 50);
   if(isCollidingWithSeeingArc(gunman, gunmen)){
-    console.log('cannot place there')
+    console.log('Cannot place gunman in another gunmans sight.')
+  } else if(isCollidingWithSeeingArc(gunman, pathBlocks)){
+    console.log('Cannot place gunman on path.')
   }else{
     gunmen.push(gunman)
     gunman.render()
-    console.log(gunmen)
   }
 });
