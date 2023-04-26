@@ -1,6 +1,8 @@
 // get the chess board element
-var board = document.getElementById("chess-board");
+const board = document.querySelectorAll(".board");
 
+console.log(board)
+/* 
 // create eight pawns for the white pieces
 for (var i = 0; i < 8; i++) {
   var pawn = document.createElement("div");
@@ -23,4 +25,4 @@ for (var i = 0; i < 8; i++) {
   var square = document.getElementById("a7"); // get the starting square for the pawns
   square.appendChild(pawn); // add the pawn to the square
   square = square.nextElementSibling; // move to the next square
-}
+} */
