@@ -39,8 +39,9 @@ render() {
 }
 
 pathBuilder() {
+  const rect = canvas.getBoundingClientRect();
   ctx.beginPath();
-  ctx.arc(this.x + 5, this.y, this.sightRadius, 0, Math.PI * 2);
+  ctx.arc((this.x + 666) - rect.left + 5, (this.y + 130) - rect.top, this.sightRadius, 0, Math.PI * 2);
   ctx.fillStyle = "blanchedalmond";
   ctx.fill();
   ctx.closePath();
@@ -120,6 +121,7 @@ let pathBlocks = {
 
 for(let i = 0; i in pathBlocks; i++){
   pathBlocks[i].pathBuilder()
+  console.log('Path Tile #'+i,'placed.')
 };
 
 function isCollidingWithSeeingArc(gunman, allGunmen) {
@@ -139,11 +141,15 @@ function isCollidingWithSeeingArc(gunman, allGunmen) {
 // Render the gunman on the canvas
 
 c.addEventListener('mousedown', (event) => {
-  let gunman = new Gunman(event.clientX-483, event.clientY-150, 15, 15, 50);
+  const rect = c.getBoundingClientRect()
+  let mouseX = event.clientX - rect.left
+  let mouseY = event.clientY - rect.top
+  let gunman = new Gunman(mouseX, mouseY, 15, 15, 50);
   if(isCollidingWithSeeingArc(gunman, gunmen)){
     console.log('cannot place there')
   }else{
     gunmen.push(gunman)
     gunman.render()
+    console.log(gunmen)
   }
 });
