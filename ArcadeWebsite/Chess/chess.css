@@ -5,20 +5,23 @@
     margin: auto;
     padding: 80px 0;
 }
-.square {
+.squareWhite {
     width: 100px;
     height: 90px;
     text-align: center;
     line-height: 100px;
     font-size: 100px;
-}
-.white {
     background-color: #b58863;
-
 }
-.black {
+.squareBlack {
+    width: 100px;
+    height: 90px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 100px;
     background-color: #812222;
 }
+
 .pawnBlack {
     background-image: url("./BlackPawn.png");
     background-size: 95%;
