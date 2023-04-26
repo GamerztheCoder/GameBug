@@ -13,18 +13,57 @@
     font-size: 100px;
 }
 .white {
-    background-color: #812222;
+    background-color: #b58863;
 
 }
 .black {
-    background-color: #b58863;
+    background-color: #812222;
 }
 .pawnBlack {
     background-image: url("./BlackPawn.png");
     background-size: 95%;
 }
-
 .pawnWhite {
     background-image: url('./WhitePawn.png');
+    background-size: 95%;
+}
+.rookBlack {
+    background-image: url('./BlackRook.png');
+    background-size: 95%;
+}
+.rookWhite {
+    background-image: url('./WhiteRook.png');
+    background-size: 95%;
+}
+.knightBlack {
+    background-image: url('./BlackKnight.png');
+    background-size: 95%;
+}
+.knightWhite {
+    background-image: url('./WhiteKnight.png');
+    background-size: 95%;
+}
+.bishopBlack {
+    background-image: url('./BlackBishop.png');
+    background-size: 95%;
+}
+.bishopWhite {
+    background-image: url('./WhiteBishop.png');
+    background-size: 95%;
+}
+.kingBlack {
+    background-image: url('./BlackKing.png');
+    background-size: 95%;
+}
+.kingWhite {
+    background-image: url('./WhiteKing.png');
+    background-size: 95%;
+}
+.queenBlack {
+    background-image: url('./BlackQueen.png');
+    background-size: 95%;
+}
+.queenWhite {
+    background-image: url('./WhiteQueen.png');
     background-size: 95%;
 }
