@@ -1,6 +1,4 @@
 const kingWhite = document.querySelector('.kingWhite');
-const pawnWhite = document.querySelectorAll('.pawnWhite');
-const pawnBlack = document.querySelectorAll('.pawnBlack')
 const chessBoard = document.querySelector('.board');
 const squareWhite = document.querySelectorAll('.squareWhite');
 const squareBlack = document.querySelectorAll('.squareBlack');
@@ -19,6 +17,9 @@ squareBlack.forEach(pos => {
     document.getElementById(pos.id).classList.add('pawnBlack')
   }
 })
+
+const pawnWhite = document.querySelectorAll('.pawnWhite');
+const pawnBlack = document.querySelectorAll('.pawnBlack');
 
 function handlePawnClickBlack(pawnevent) {
   function handleChessBoardClick(event) {
@@ -50,6 +51,7 @@ pawnBlack.forEach(pawn => {
 });
 pawnWhite.forEach(pawn => {
   pawn.addEventListener('click', handlePawnClickWhite);
+  console.log('Clicked')
 })
 
 
