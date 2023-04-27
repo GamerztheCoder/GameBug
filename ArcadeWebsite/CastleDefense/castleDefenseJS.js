@@ -38,14 +38,14 @@ render() {
   ctx.closePath();
 }
 
-pathBuilder() {
+/* pathBuilder() {
   const rect = c.getBoundingClientRect();
   ctx.beginPath();
   ctx.arc((this.x + 300) - rect.left + 350, (this.y + 140) - rect.top, this.sightRadius, 0, Math.PI * 2);
   ctx.fillStyle = "blanchedalmond";
   ctx.fill();
   ctx.closePath();
-}
+} */
 }
 
 let gunmen = [];
@@ -119,9 +119,9 @@ let pathBlocks = {
   67: new Gunman(606, 213, 15, 15, 50),
 };
 
-for(let i = 1; i in pathBlocks; i++){
+/* for(let i = 1; i in pathBlocks; i++){
   pathBlocks[i].pathBuilder()
-};
+}; */
 
 function isCollidingWithSeeingArc(gunman, allGunmen) {
   for (let i = 0; i < allGunmen.length; i++) {
@@ -146,9 +146,7 @@ c.addEventListener('mousedown', (event) => {
   let gunman = new Gunman(mouseX, mouseY, 15, 15, 50);
   if(isCollidingWithSeeingArc(gunman, gunmen)){
     console.log('Cannot place gunman in another gunmans sight.')
-  } else if(isCollidingWithSeeingArc(gunman, pathBlocks)){
-    console.log('Cannot place gunman on path.')
-  }else{
+  } else {
     gunmen.push(gunman)
     gunman.render()
   }
