@@ -4,7 +4,7 @@ html {
 .wrapper {
   padding: 0; margin: 0;
   min-height: 100%;
-  background: antiquewhite;
+  background: rgb(59, 59, 255);
 }
 .wrapper .content {
   padding: 40px; 
