@@ -2,6 +2,23 @@ const kingWhite = document.querySelector('.kingWhite');
 const pawnWhite = document.querySelectorAll('.pawnWhite');
 const pawnBlack = document.querySelectorAll('.pawnBlack')
 const chessBoard = document.querySelector('.board');
+const squareWhite = document.querySelectorAll('.squareWhite');
+const squareBlack = document.querySelectorAll('.squareBlack');
+
+squareWhite.forEach(pos => {
+  if(pos.id.includes('2')){
+    document.getElementById(pos.id).classList.add('pawnWhite')
+  } else if(pos.id.includes('7')){
+    document.getElementById(pos.id).classList.add('pawnBlack')
+  }
+})
+squareBlack.forEach(pos => {
+  if(pos.id.includes('2')){
+    document.getElementById(pos.id).classList.add('pawnWhite')
+  } else if(pos.id.includes('7')){
+    document.getElementById(pos.id).classList.add('pawnBlack')
+  }
+})
 
 function handlePawnClickBlack(pawnevent) {
   function handleChessBoardClick(event) {
