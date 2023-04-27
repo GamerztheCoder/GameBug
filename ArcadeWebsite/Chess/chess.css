@@ -23,50 +23,50 @@
 }
 
 .pawnBlack {
-    background-image: url("./BlackPawn.png");
+    background-image: url("./PiecesPNG/BlackPawn.png");
     background-size: 95%;
 }
 .pawnWhite {
-    background-image: url('./WhitePawn.png');
+    background-image: url('./PiecesPNG/WhitePawn.png');
     background-size: 95%;
 }
 .rookBlack {
-    background-image: url('./BlackRook.png');
+    background-image: url('./PiecesPNG/BlackRook.png');
     background-size: 95%;
 }
 .rookWhite {
-    background-image: url('./WhiteRook.png');
+    background-image: url('./PiecesPNG/WhiteRook.png');
     background-size: 95%;
 }
 .knightBlack {
-    background-image: url('./BlackKnight.png');
+    background-image: url('./PiecesPNG/BlackKnight.png');
     background-size: 95%;
 }
 .knightWhite {
-    background-image: url('./WhiteKnight.png');
+    background-image: url('./PiecesPNG/WhiteKnight.png');
     background-size: 95%;
 }
 .bishopBlack {
-    background-image: url('./BlackBishop.png');
+    background-image: url('./PiecesPNG/BlackBishop.png');
     background-size: 95%;
 }
 .bishopWhite {
-    background-image: url('./WhiteBishop.png');
+    background-image: url('./PiecesPNG/WhiteBishop.png');
     background-size: 95%;
 }
 .kingBlack {
-    background-image: url('./BlackKing.png');
+    background-image: url('./PiecesPNG/BlackKing.png');
     background-size: 95%;
 }
 .kingWhite {
-    background-image: url('./WhiteKing.png');
+    background-image: url('./PiecesPNG/WhiteKing.png');
     background-size: 95%;
 }
 .queenBlack {
-    background-image: url('./BlackQueen.png');
+    background-image: url('./PiecesPNG/BlackQueen.png');
     background-size: 95%;
 }
 .queenWhite {
-    background-image: url('./WhiteQueen.png');
+    background-image: url('./PiecesPNG/WhiteQueen.png');
     background-size: 95%;
 }

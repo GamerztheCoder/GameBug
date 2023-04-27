@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 .guideScreen {
   padding: 0; margin: 0;
   height: 50px;
@@ -7,19 +6,11 @@
 }
 
 .game {
-    background-color: rgb(41, 97, 46);
+    background-image: url('./Screenshot\ \(7\).png');
+    background-size: 100%;
     border: 10px  solid black;
 }
 
 body {
     background-color: blanchedalmond;
-=======
-.game {
-    background-color: burlywood;
-    border: 20px  solid rgb(3, 3, 3);
-}
-
-.guideScreen {
-    background: linear-gradient(to bottom right lime, darkgreen);
->>>>>>> Stashed changes
 }

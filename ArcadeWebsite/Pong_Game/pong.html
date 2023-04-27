@@ -7,11 +7,10 @@
     <py-script src=""></py-script>
   </head>
 
-  <body>
+  <body class="wrapper">
     <center>
-      <h1>PONG</h1>
-    </center>
-    <center>
+      <h1>GameBug - Pong</h1>
+      <br>
       <canvas class="game hidden" id="pongTable" width="550" height="500"></canvas>
       <h3 class="shown" id="startInstruction">
         <p id="gameGuide">Press the START button to play</p>
@@ -21,8 +20,8 @@
       </h3>
       <p></p>
       <main id="scoreBoard" class="hidden">
-        <h2 id="userGoal">Player1: <span id="player0Points">0</span></h2>
-        <h2 id="user2Goal">Player2: <span id="player1Points">0</span></h2>
+        <h2 id="userGoal">Player 1: <span id="player0Points">0</span></h2>
+        <h2 id="user2Goal">Player 2: <span id="player1Points">0</span></h2>
       </main>
     </center>
     <script src="pong.js"></script>
