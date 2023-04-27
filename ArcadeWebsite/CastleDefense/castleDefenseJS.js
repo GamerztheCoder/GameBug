@@ -41,7 +41,7 @@ render() {
 pathBuilder() {
   const rect = c.getBoundingClientRect();
   ctx.beginPath();
-  ctx.arc((this.x + 300) - rect.left + 5, (this.y + 140) - rect.top, this.sightRadius, 0, Math.PI * 2);
+  ctx.arc((this.x + 300) - rect.left + 350, (this.y + 140) - rect.top, this.sightRadius, 0, Math.PI * 2);
   ctx.fillStyle = "blanchedalmond";
   ctx.fill();
   ctx.closePath();
