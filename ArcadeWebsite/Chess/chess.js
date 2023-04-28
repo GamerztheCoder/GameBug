@@ -1,5 +1,6 @@
 
 
+
 const kingWhite = document.querySelector('.kingWhite');
 const pawnWhite = document.querySelectorAll('.pawnWhite');
 const pawnBlack = document.querySelectorAll('.pawnBlack')
