@@ -5,6 +5,13 @@
     margin: auto;
     padding: 80px 0;
 }
+.guideScreen {
+    padding: 0; margin: 0;
+    height: 50px;
+    background: linear-gradient(135deg, lime, darkgreen);
+    font-size: xx-large;
+  }
+
 .squareWhite {
     width: 100px;
     height: 90px;
