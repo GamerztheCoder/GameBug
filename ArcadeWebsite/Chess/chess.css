@@ -79,9 +79,6 @@
 }
 
 .possibleSpot {
-    content: "";
-    width: 30px;
-    height: 30px;
-    background-color: rgba(#b58863, 0.5); /* semi-transparent white */
-    border-radius: 50%; /* make it a circle */
+    background-image: url('./PiecesPNG/redCircle.png');
+    background-size: 95%;
 }
