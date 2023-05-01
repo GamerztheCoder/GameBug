@@ -6,16 +6,16 @@ const kingWhite = document.querySelector('.kingWhite');
 const chessBoard = document.querySelector('.board');
 
 squareWhite.forEach(pos => {
-  if(pos.id.includes('2')){
+  if(pos.id.split('')[1] == '2'){
     document.getElementById(pos.id).classList.add('pawnWhite')
-  } else if(pos.id.includes('7')){
+  } else if(pos.id.split('')[1] == '7'){
     document.getElementById(pos.id).classList.add('pawnBlack')
   }
 })
 squareBlack.forEach(pos => {
-  if(pos.id.includes('2')){
+  if(pos.id.split('')[1] == '2'){
     document.getElementById(pos.id).classList.add('pawnWhite')
-  } else if(pos.id.includes('7')){
+  } else if(pos.id.split('')[1] == '7'){
     document.getElementById(pos.id).classList.add('pawnBlack')
   }
 })
@@ -27,23 +27,22 @@ function handlePawnClickBlack(pawnevent) {
   function handleChessBoardClick(event) {
     document.getElementById(event.target.id).classList.add('pawnBlack');
     document.getElementById(pawnevent.target.id).classList.remove('pawnBlack');
-  }
-
-  chessBoard.addEventListener('click', handleChessBoardClick);
-
+    }
+  chessBoard.addEventListener('click', handleChessBoardClick)
   setTimeout(function() {
     chessBoard.removeEventListener('click', handleChessBoardClick);
   }, 1000);
 }
 function handlePawnClickWhite(pawnevent) {
+  let originCoord = pawnevent.target.id.split('');
   function handleChessBoardClick(event) {
     let coordList = event.target.id.split('');
+    if(coordList[1] <= originCoord[1]+2){
     document.getElementById(event.target.id).classList.add('pawnWhite');
     document.getElementById(pawnevent.target.id).classList.remove('pawnWhite');
+    }
   }
-
   chessBoard.addEventListener('click', handleChessBoardClick);
-
   setTimeout(function() {
     chessBoard.removeEventListener('click', handleChessBoardClick);
   }, 1000);
