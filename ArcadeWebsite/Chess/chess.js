@@ -1,5 +1,4 @@
-
-
+'use strict'
 
 const kingWhite = document.querySelector('.kingWhite');
 const pawnWhite = document.querySelectorAll('.pawnWhite');
@@ -37,12 +36,5 @@ pawnBlack.forEach(pawn => {
 pawnWhite.forEach(pawn => {
   pawn.addEventListener('click', handlePawnClickWhite);
 })
-
-
-
-pawnWhite.addEventListener('mousedown', function(event){
-  document.getElementById('a3').classList.add('pawnWhite');
-  document.getElementById('a2').classList.remove('pawnWhite');
-}); 
 
 
