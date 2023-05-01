@@ -1,9 +1,27 @@
 'use strict'
 
+const squareBlack = document.querySelectorAll('.squareBlack');
+const squareWhite = document.querySelectorAll('.squareWhite');
 const kingWhite = document.querySelector('.kingWhite');
-const pawnWhite = document.querySelectorAll('.pawnWhite');
-const pawnBlack = document.querySelectorAll('.pawnBlack')
 const chessBoard = document.querySelector('.board');
+
+squareWhite.forEach(pos => {
+  if(pos.id.includes('2')){
+    document.getElementById(pos.id).classList.add('pawnWhite')
+  } else if(pos.id.includes('7')){
+    document.getElementById(pos.id).classList.add('pawnBlack')
+  }
+})
+squareBlack.forEach(pos => {
+  if(pos.id.includes('2')){
+    document.getElementById(pos.id).classList.add('pawnWhite')
+  } else if(pos.id.includes('7')){
+    document.getElementById(pos.id).classList.add('pawnBlack')
+  }
+})
+
+const pawnWhite = document.querySelectorAll('.pawnWhite');
+const pawnBlack = document.querySelectorAll('.pawnBlack');
 
 function handlePawnClickBlack(pawnevent) {
   function handleChessBoardClick(event) {
@@ -19,6 +37,7 @@ function handlePawnClickBlack(pawnevent) {
 }
 function handlePawnClickWhite(pawnevent) {
   function handleChessBoardClick(event) {
+    let coordList = event.target.id.split('');
     document.getElementById(event.target.id).classList.add('pawnWhite');
     document.getElementById(pawnevent.target.id).classList.remove('pawnWhite');
   }
