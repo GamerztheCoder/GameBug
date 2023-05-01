@@ -35,3 +35,7 @@ body {
     background-color: antiquewhite;
     text-align: center;
 }
+
+th {
+    padding: 10px;
+}
